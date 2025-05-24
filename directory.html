@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Course Home Page for WDD 231 — BYU-Pathway">
+  <meta name="author" content="Dunnoh Yovonie">
+  <title>Directory |  Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/directory.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="Scripts/navigation.js" defer></script>
+  <script src="Scripts/date.js" defer></script>
+  <script src="Scripts/course.js" defer></script>
+</head>
+<body>
+
+        <header>
+            <img src="images/whatsapp pp.png" alt="Your Profile Photo" width="80" height="80">
+            <span>DUNNOH YOVONIE</span>
+          </header>
+
+
+        <nav>
+            <button id="menu" type="button">☰ Menu</button>
+            <ul class="nav-links">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="#">Chamber</a></li>
+              <li><a href="#">Final</a></li>
+              <li><a href="https://github.com/yourgithubusername">GitHub Profile</a></li>
+              <li><a href="https://linkedin.com">LinkedIn</a></li>
+            </ul>
+          </nav>
+
+    <main>
+        <h1>Member Directory</h1>
+        <div class="view-toggle">
+            <div class="view-toggle">
+                <button  type="button" id="grid-view">
+                    <i class="fas fa-th-large"></i> Grid View
+                </button>
+                <button type="button" id="list-view">
+                    <i class="fas fa-list"></i> List View
+                </button>
+            </div>
+        </div>
+
+        <div id="member-container">
+            <!-- Members will be inserted here by JavaScript -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="copyright-year"></span> DUNNOH YOVONIE | SIERRA LEONE</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

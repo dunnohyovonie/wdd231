@@ -1,0 +1,320 @@
+/* Directory Page - Premium Design */
+:root {
+    --primary: #2a4365;
+    --secondary: #3182ce;
+    --accent: #e53e3e;
+    --light: #ebf8ff;
+    --dark: #1a365d;
+    --text: #2d3748;
+    --text-light: #f7fafc;
+    --gold: #d69e2e;
+    --silver: #a0aec0;
+    --bronze: #b7791f;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Main Content Styling */
+main {
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    letter-spacing: -0.025em;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+    border-radius: 2px;
+}
+
+/* View Toggle Buttons */
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2.5rem 0;
+}
+
+.view-toggle button {
+    padding: 0.75rem 1.75rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#grid-view {
+    background-color: var(--secondary);
+    color: white;
+}
+
+#list-view {
+    background-color: white;
+    color: var(--primary);
+    border: 1px solid var(--secondary);
+}
+
+.view-toggle button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+#grid-view:hover {
+    background-color: #2b6cb0;
+}
+
+#list-view:hover {
+    background-color: var(--light);
+}
+
+.view-toggle button i {
+    font-size: 1.1rem;
+}
+
+/* Grid View Styling */
+#member-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.member-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+}
+
+.member-card-content {
+    padding: 1.75rem;
+    text-align: center;
+}
+
+.member-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: var(--shadow-sm);
+    margin: -60px auto 1.5rem;
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+
+.member-card h3 {
+    color: var(--dark);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.member-card p {
+    color: var(--text);
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.member-card .contact-info {
+    margin: 1.25rem 0;
+    padding: 1rem 0;
+    border-top: 1px dashed #e2e8f0;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.member-card a.website-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    color: white;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.member-card a.website-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    opacity: 0.9;
+}
+
+
+.membership-level {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.member {
+    background-color: var(--light);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.silver {
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e0);
+    color: #4a5568;
+}
+
+.gold {
+    background: linear-gradient(135deg, #f6e05e, #d69e2e);
+    color: #744210;
+}
+
+/* List View Styling */
+#member-container.list-view {
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#member-container.list-view .member-list {
+    list-style: inside;
+    padding: 0;
+}
+
+#member-container.list-view .member-item {
+    background: white;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+#member-container.list-view .member-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+#member-container.list-view .list-item-content {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+
+#member-container.list-view .member-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: var(--shadow-sm);
+    object-fit: cover;
+}
+
+#member-container.list-view .member-info {
+    flex: 1;
+}
+
+#member-container.list-view .member-info h3 {
+    color: var(--dark);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+#member-container.list-view .member-info p {
+    color: var(--text);
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+#member-container.list-view .member-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+#member-container.list-view a.website-link {
+    padding: 0.5rem 1.25rem;
+    background: var(--secondary);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+#member-container.list-view a.website-link:hover {
+    background: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #member-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    #member-container.list-view .list-item-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    #member-container.list-view .member-actions {
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .view-toggle {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
