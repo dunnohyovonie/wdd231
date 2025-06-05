@@ -1,0 +1,105 @@
+@media (min-width: 640px) {
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    #menu {
+      display: none;
+    }
+  
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  
+    section {
+      margin-bottom: 0;
+    }
+  
+    .buttons {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+  
+    .buttons button {
+      margin: 0 0.5rem;
+    }
+    .card {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 1rem;
+        margin: 1rem;
+      }
+  }
+  /* Larger Screen Styles */
+@media (min-width: 768px) {
+  main {
+      grid-template-columns: 1fr 1fr;
+  }
+  
+  .hero-overlay {
+      width: 60%;
+  }
+  
+  .hero-overlay h2 {
+      font-size: 2.5rem;
+  }
+  
+  .spotlights {
+      grid-column: span 2;
+  }
+  
+  #spotlight-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+      grid-template-columns: 2fr 1fr;
+  }
+  
+  .hero-overlay {
+      width: 50%;
+  }
+  
+  .hero-overlay h2 {
+      font-size: 3rem;
+  }
+  
+  .spotlights {
+      grid-column: span 3;
+  }
+  
+  #spotlight-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .weather {
+      grid-row: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  #menu-button {
+      display: block;
+  }
+  
+  nav ul {
+      flex-direction: column;
+      display: none;
+  }
+  
+  nav ul.show {
+      display: flex;
+  }
+  
+  nav ul li {
+      margin: 0.5rem 0;
+  }
+}

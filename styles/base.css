@@ -1,0 +1,241 @@
+/* Base Styles */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #6c757d;
+    --accent-color: #ffc107;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.dd img{
+    max-width: 5%;
+    height: 5;
+    border-radius: 50%; 
+}
+.nameprofile{
+    margin-top: 0%;
+    font-weight:bolder; 
+    color: #eee;  
+}
+.dd{
+
+    background-color: #0e034a;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+#menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+nav ul li.active a {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    max-width: var(--max-width);
+    margin: 0 auto 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 80%;
+}
+
+.hero-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+}
+
+/* Main Content Sections */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Cards */
+.event-card, .weather-card, .spotlight-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Weather Section */
+#current-weather {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
+#current-temp {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.forecast-day {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Spotlight Section */
+.spotlight-card {
+    text-align: center;
+}
+
+.spotlight-card img {
+    max-height: 80px;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}

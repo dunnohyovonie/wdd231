@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Business One",
+        "address": "123 Main St, City, State ZIP",
+        "phone": "555-123-4567",
+        "website": "https://businessone.com",
+        "image": "whatsapp.",
+        "membership": 3,
+        "description": "Local business description"
+    },
+    {
+        "name": "Business Two",
+        "address": "456 Oak Ave, City, State ZIP",
+        "phone": "555-987-6543",
+        "website": "https://businesstwo.com",
+        "image": "business-two.jpg",
+        "membership": 2,
+        "description": "Another local business"
+    },
+    {
+        "name": "Business Two",
+        "address": "456 Oak Ave, City, State ZIP",
+        "phone": "555-987-6543",
+        "website": "https://businesstwo.com",
+        "image": "business-two.jpg",
+        "membership": 2,
+        "description": "Another local business"
+    }
+]
